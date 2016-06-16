@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>自执行函数</title>
+</head>
+<body>
+
+</body>
+<script>
+    function foo(){
+        console.log(this.a);
+    }
+    var a = 2;
+    var o = {a:3,foo:foo};
+    var p = {a:4};
+    (p.foo=o.foo)();
+</script>
+</html>

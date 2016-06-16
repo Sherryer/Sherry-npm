@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>响应式布局</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <header id="header">
+        <h3>页头</h3>
+      </header>
+      <nav id="navigation">
+        <h3>导航</h3>
+      </nav>
+      <section id="mainbody">
+        <h3>主体</h3>
+        <p>比如分辨率480×800的屏幕，就是由800行、480列的像素点组成的。每个点发出不同颜色的光，构成我们所看到的画面。而手机屏幕的物理尺寸和像素尺寸是不成比例的。最典型的例子，iPhone 3gs的屏幕像素是320×480，iPhone 4s的屏幕像素是640×960。刚好两倍，然而两款手机都是3.5英寸的。
+所以，我们要引入最重要的一个概念：像素密度，也就是PPI（pixels per inch）。这项指标是连接数字世界与物理世界的桥梁。
+</p>
+      </section>
+      <aside id="sidebar">
+        <h3>边栏</h3> 
+        <p>无论画布设成多大，我们设计的是基准倍率的界面样式，而且开发人员需要的单位都是逻辑像素。所以为了保证准确高效的沟通，双方都需要以逻辑像素尺寸来描述和理解界面，无论是在标注图还是在日常沟通中。不要再说“底部标签栏的高度是96像素，我是按照xhdpi做的”这样的话了。</p>
+        </aside>
+      <footer id="footer">
+        <h3>页脚</h3>
+      </footer>
+    </div><!-- end .container -->
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="div"></div>
+</body>
+<script>
+    var div11111=document.getElementById('div');
+    var event = new MouseEvent("click", {
+        bubbles: true,
+        cancelable: true,
+        view: div11111.ownerDocument.defaultView
+    });
+
+
+    div11111.onclick=function (){
+        alert('123')
+    };
+
+
+    div11111.dispatchEvent(event);
+</script>
+</html>

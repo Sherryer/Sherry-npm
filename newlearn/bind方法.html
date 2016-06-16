@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="ku/angular.min.js"></script>
+</head>
+<body>
+<div id="scroll">111111</div>
+</body>
+<script>
+    function T(c) {
+        this.id = "Object";
+        this.dom = document.getElementById("scroll");
+    }
+    T.prototype = {
+        init: function() {
+            //①
+            this.dom.onmouseover = function() {
+                console.log("Over-->"+this.id);
+            };
+            //②
+            this.dom.onmouseout = function() {
+                console.log("Out -->"+this.id);
+            } .bind(this)
+        }
+    };
+    (new T()).init();
+</script>
+</html>

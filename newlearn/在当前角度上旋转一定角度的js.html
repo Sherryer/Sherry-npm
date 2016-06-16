@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>无标题文档</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        #content{
+            position: relative;
+            width: 250px;
+            height: 180px;
+            border: 1px solid black;
+            top: 0;
+            left: 0;
+            transform:scale(0.5,0.5);
+            transition:0.2s ease;
+        }
+        .transition{
+            transition:0.5s ease;
+        }
+        #part1{
+            float: left;
+            margin-left: 21px;
+        }
+
+        #div1{
+            position: absolute;
+            width: 159px;
+            height: 40px;
+            background-image: linear-gradient(90deg, #6e0000,red 80%);
+        }
+        #div11{
+            position: absolute;
+            border-radius: 0 0 5px 1px /0 0 15px 1px;
+            width: 45px;
+            height: 93px;
+            background: red;
+            transform: skewX(25deg);
+        }
+        #div12{
+            width:26px;
+            height: 53px;
+            background: red;
+            position: absolute;
+            right: 0;
+        }
+
+
+        #div2{
+            top: 140px;
+            position: absolute;
+            width: 159px;
+            height: 40px;
+            background-image: linear-gradient(90deg, #6e0000,red 80%);
+        }
+        #div21{
+            position: absolute;
+            width: 45px;
+            border-radius:1px 5px 0 0/ 1px 15px 0 0;
+            height: 93px;
+            background: red;
+            transform: skewX(-25deg);
+            bottom: 0;
+        }
+        #div22{
+            width:26px;
+            height: 53px;
+            background: red;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        #part2{
+            padding-top: 150px;
+            float: right;
+        }
+        #div3{
+            position: relative;
+            width: 50px;
+            height: 12px;
+            background: red;
+            animation: rotateIn 3s linear;
+        }
+        #div4{
+            position: absolute;
+            left: 19px;
+            top: -19px;
+            width: 12px;
+            height: 50px;
+            background: red;
+        }
+
+
+
+        /*上半部分*/
+        #content:hover #div1{
+            transform:rotate(5deg) skew(-25deg ,6deg);
+            transform-origin: 0 210%;
+        }
+        #content:hover #div11{
+            border-radius: 0 0 5px 2px /0 0 15px 15px;
+        }
+
+        #content:hover #part1{
+            transform:rotate(8deg);
+        }
+        /*下半部分*/
+        #content:hover #div2{
+            transform:rotate(-5deg) skew(25deg ,-6deg);
+            transform-origin: 0 -110%;
+        }
+        #content:hover #div21{
+            border-radius:2px 5px 0 5px/ 15px 15px 0 80%;
+        }
+        /*十字*/
+        #content:hover #div3{
+            transform:rotate(360deg);
+            transform-origin: center;
+        }
+        #content:hover #part2{
+            transform:translate(100%,-10%);
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <div id="part1" class="transition">
+        <div id="div1" class="transition">
+            <div id="div11"></div>
+            <div id="div12" ></div>
+        </div>
+
+        <div id="div2" class="transition">
+            <div id="div21" class="transition"></div>
+            <div id="div22"></div>
+        </div>
+    </div>
+
+    <div id="part2" class="transition">
+        <div id="div3"  class="transition">
+            <div id="div4"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var body=document.getElementsByTagName("body")[0];
+    body.style.height=window.innerHeight+'px';
+    var div=document.getElementById('content');
+    var rad=57.29578;
+    var old=0;
+
+
+//旋转点击旋转
+
+    document.onclick=function(e){
+        var divx=div.offsetWidth/2+div.offsetLeft;
+        var divy=div.offsetHeight/2+div.offsetTop;
+
+
+
+        var x= e.clientX-divx;
+        var y= divy- e.clientY;
+        var deg=Math.atan(y/x)*rad;
+//        console.log(x,y,deg);
+        if(x>=0&&y>=0){
+            //第一象限
+//            deg=deg;
+        }else if(x<=0&&y>=0){
+            //第二象限
+            deg=(deg+180);
+        }else if(x<=0&&y<=0){
+            //第三象限
+            deg=(180+deg);
+        }else{
+            //第四象限
+            deg=(deg+360);
+        }
+
+
+        var cha=old%360-deg;
+        while(cha>180){
+            cha=cha-360
+        }
+        while(cha<-180){
+            cha=cha+360;
+//            alert(1)
+        }
+        old=old-cha;
+        console.log("点击角度："+deg,"差值"+cha,"old:"+old);
+            div.style.transform='scale(0.5,0.5) rotate('+-old+'deg)';
+    }
+</script>
+</html>

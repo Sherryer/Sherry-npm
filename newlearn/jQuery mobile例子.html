@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../ku/jQm/css/jquery.mobile-1.4.5.min.css"/>
+    <script src="../ku/jQm/js/jquery.min.2.1.js"></script>
+    <script src="../ku/jQm/js/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>固定的基本结构</title>
+</head>
+<body>
+<!--必须放在这里面不然会加载两次-->
+<div data-role="page" id="page1" >
+    <div date-role="header">
+        <h2>哈哈哈页面1</h2>
+    </div>
+    <div role="min" class="ui-content">
+        <p>这是中间
+            <a href="#page2" data-rel="dialog">到page2</a>
+        </p>
+    </div>
+    <div date-role="footer">
+        <p>这是底部</p>
+    </div>
+</div>
+
+<!--<div data-role="page" id="page2">-->
+    <!--<div date-role="header">-->
+        <!--<h2>哈哈哈页面2</h2>-->
+    <!--</div>-->
+    <!--<div role="min" class="ui-content">-->
+        <!--<p>这是中间-->
+            <!--<a href="#page1">返回page1</a>-->
+        <!--</p>-->
+    <!--</div>-->
+    <!--<div date-role="footer">-->
+        <!--<p>这是底部</p>-->
+    <!--</div>-->
+
+<!--一个data-role="page" 就是一个页面-->
+<!--可以通过 添加锚点来 切换页面 因为在jQuery mobile里锚点被重写了-->
+<!--在a标签里面 加上data-rel="dialog" 可以以对话框形式打开页面-->
+<!--data-dialog="true" 让整个网页变成对话框形式-->
+</div>
+</body>
+</html>

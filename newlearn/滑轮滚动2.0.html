@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    var scrollFunc = function (e) {
+        e = e || window.event;
+        if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件
+            if (e.wheelDelta > 0) { //当滑轮向上滚动时
+                up()
+            }
+            if (e.wheelDelta < 0) { //当滑轮向下滚动时
+                down()
+            }
+        } else if (e.detail) {  //Firefox滑轮事件
+            if (e.detail> 0) { //当滑轮向上滚动时
+                down();
+            }
+            if (e.detail< 0) { //当滑轮向下滚动时
+                up()
+            }
+        }
+    };
+   function onn(){
+       //给页面绑定滑轮滚动事件
+       if (document.addEventListener) {//firefox
+           document.addEventListener('DOMMouseScroll', scrollFunc);
+       }
+       document.onmousewheel = scrollFunc;   //ie 谷歌
+   }
+    function of(){
+        //给页面绑定滑轮滚动事件
+        if (document.addEventListener) {//firefox
+            document.removeEventListener('DOMMouseScroll', scrollFunc);
+        }
+        document.onmousewheel = null;   //ie 谷歌
+    }
+
+    function up(){
+        alert('up')
+    }
+    function down(){
+        alert('down')
+    }
+</script>
+</html>

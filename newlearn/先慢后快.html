@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ff0000;
+            position: absolute;
+            left: 0;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="div"></div>
+<span></span>
+</body>
+<script>
+    alert('没做呢');
+
+    var div=document.getElementById("div");
+    function go(target){
+        clearInterval(time);
+        var speed;
+        var half=Math.abs(target-div.offsetLeft)/2;
+        var time=setInterval(function(){
+            speed=Math.abs(half-div.offsetLeft)/5;
+
+            speed>0?speed=Math.ceil(speed):speed=Math.floor(speed);
+            if(speed<20){
+                speed=20;
+            }
+            if(div.offsetLeft+speed>target){
+                div.style.left=target+'px';
+                clearInterval(time)
+            }else{
+                div.style.left=div.offsetLeft+speed+'px';
+                console.log(speed)
+            }
+        },30)
+    }
+
+    go(1000)
+
+</script>
+</html>

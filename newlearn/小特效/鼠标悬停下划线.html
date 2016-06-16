@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jquery鼠标悬停导航下划线滑出效果</title>
+    <style>
+        *{ margin:0; padding:0; list-style:none;}
+        img{ border:0;}
+
+        .header{ width:100%; background:#F5F5F5;}
+        .nav{ width:1000px; margin:0 auto; overflow:hidden;}
+        .nav ul li{ height:40px; line-height:40px; float:left; padding:10px 5px; margin:0px 5px;position:relative;}
+        .nav ul li a{ color:#666; font-family:'Microsoft Yahei'; font-size:14px; text-decoration:none;}
+        .nav ul li a:hover{ color:#000; text-decoration:none;}
+        .nav ul li span{ display:block; position:absolute; width:0px; height:0px; background:#1FAEFF; top:58px; left:50%;}
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="nav">
+        <ul>
+            <li><a>首页</a><span></span></li>
+            <li><a>菜单导航</a><span></span></li>
+            <li><a>时间日期</a><span></span></li>
+            <li><a>焦点图</a><span></span></li>
+            <li><a>tab标签</a><span></span></li>
+            <li><a>jquery特效</a><span></span></li>
+            <li><a>相册代码</a><span></span></li>
+            <li><a>图片特效</a><span></span></li>
+            <li><a>名站特效</a><span></span></li>
+        </ul>
+    </div>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('.nav li').hover(function(){
+            $('span',this).stop().css('height','2px');
+            $('span',this).animate({
+                left:'0',
+                width:'100%'
+//                right:'0'
+            },200);
+        },function(){
+            $('span',this).stop().animate({
+                left:'50%',
+                width:'0'
+            },200);
+        });
+    });
+</script>
+</body>
+</html>
