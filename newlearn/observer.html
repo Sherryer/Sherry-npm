@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+</body>
+<script>
+    var observer = {
+        addSubscriber: function(callback) {
+            this.subscribers[this.subscribers.length] = callback;
+        },
+        removeSubscriber: function(callback) {
+            for (var i=0; i<this.subscribers.length; i++) {
+                if (this.subscribers[i] === callback) {
+                    delete(this.subscribers[i]);
+                }
+            }
+        },
+        publish: function(what) {
+            for (var i = 0; i < this.subscribers.length; i++) {
+                if (typeof this.subscribers[i] === 'function') {
+                    this.subscribers[i](what);
+                }
+            }
+        },
+        make: function(o) {
+            for (var i in this) {
+                if (i ==  'make') continue;
+                o[i] = this[i];
+                o.subscribers = [];
+            }
+        }
+    };
+
+    var blogger = {
+        writeBlogPost: function() {
+            var content = 'Today is ' + new Date();
+            this.publish(content);
+        }
+    };
+
+    var la_times = {
+        newIssue: function() {
+            var paper = 'Martians have landed on Earth!';
+            this.publish(paper);
+        }
+    };
+
+    observer.make(blogger);
+    observer.make(la_times);
+    // console.log(blogger);
+    // console.log(la_times);
+
+    var jack = {
+        read: function(what) {
+            console.log('[jack] I just read that:' + what);
+        }
+    };
+
+    var jill = {
+        gossip: function(what) {
+            console.log('[jill] You didn\'t hear that? ' + what);
+        }
+    };
+
+
+    // use
+
+    blogger.addSubscriber(jack.read);
+    blogger.writeBlogPost();
+
+    la_times.addSubscriber(jill.gossip);
+    la_times.newIssue();
+
+
+
+
+
+</script>
+</html>
