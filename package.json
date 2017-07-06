@@ -1,6 +1,6 @@
 {
   "name": "sherryer",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "npmpackage",
   "main": "index.js",
   "scripts": {
