@@ -1,0 +1,19 @@
+{
+  "name": "sherryer",
+  "version": "1.0.3",
+  "description": "npmpackage",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sherryer/sherry.git"
+  },
+  "author": "Sherry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sherryer/sherry/issues"
+  },
+  "homepage": "https://github.com/Sherryer/sherry#readme"
+}

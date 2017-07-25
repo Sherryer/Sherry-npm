@@ -1,0 +1,21 @@
+{
+  "name": "sherry-move",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sherryer/Sherry-npm.git"
+  },
+  "author": "Sherry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sherryer/Sherry-npm/issues"
+  },
+  "homepage": "https://github.com/Sherryer/Sherry-npm#readme"
+}
