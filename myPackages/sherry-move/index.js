@@ -1,3 +1,4 @@
+'use strict';
 function getStyle(obj, name) {
     if (obj.currentStyle) {
         return obj.currentStyle[name];
