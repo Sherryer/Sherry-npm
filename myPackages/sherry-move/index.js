@@ -9,9 +9,11 @@ function getStyle(obj, name) {
 
 function startMove(obj, json, fnEnd) {
     clearInterval(obj.timer);
+    if(typeof json.speed != undefined && isNaN(Number(json.speed))){
+        throw (".speed must be a number")
+    }
     obj.timer = setInterval(function () {
         var bStop = true;
-
         for (var attr in  json) {
             var cur = 0;
             if (attr == "opacity") {
@@ -19,7 +21,7 @@ function startMove(obj, json, fnEnd) {
             } else {
                 cur = parseInt(getStyle(obj, attr));
             }
-            var speed = (json[attr] - cur) / 6;
+            var speed = (json[attr] - cur) / Math.min(Math.abs(json.speed),10);
             speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
             if (cur != json[attr]) {
                 bStop = false;
@@ -37,7 +39,7 @@ function startMove(obj, json, fnEnd) {
             clearInterval(obj.timer);
             if (fnEnd)fnEnd()
         }
-    }, 30)
+    }, 16.7)
 }
 
 export default startMove
