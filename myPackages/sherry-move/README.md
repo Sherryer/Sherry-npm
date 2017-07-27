@@ -1,6 +1,6 @@
 # move
 
-html dom move or transformation
+light dom move or transformation plug-in
 ## Install
 
 

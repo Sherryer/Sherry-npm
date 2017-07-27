@@ -21,7 +21,7 @@ function startMove(obj, json, fnEnd) {
             } else {
                 cur = parseInt(getStyle(obj, attr));
             }
-            var speed = (json[attr] - cur) / Math.min(Math.abs(json.speed),10);
+            var speed = (json[attr] - cur) / Math.min(Math.abs(json.speed)||10,10);
             speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
             if (cur != json[attr]) {
                 bStop = false;
