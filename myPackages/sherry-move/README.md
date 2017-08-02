@@ -14,14 +14,14 @@ npm install sherry-move
 
 | arguments | Description | defaultvalue | type |
 | :---: | --- | --- | --- |
-| dom | target dom | ng ... | object |
-| json | information of this transform,like{ 'width' : '200', 'height' : '150' , 'speed' : '6'}| json |
+| dom | target dom | - | object |
+| json | information of this transform,like{ 'width' : '200', 'height' : '150' , 'speed' : '6'}| - | json |
 | callback | callback | null | function |
 
 ### Use with HTML &lt;script&gt; tag:
 
 ```
-<script src="/node_modules/sherry-move/dist/sherryMove"></script>
+<script src="/node_modules/sherry-move/dist/sherryMove.js"></script>
 ```
 
 other js field you can write:
@@ -36,7 +36,7 @@ other js field you can write:
 ### Use with npm:
 
 ```
-import startMove from "../myPackages/sherry-move";
+import startMove from "sherry-move";
 ...
 startMove(dom, {"width": "300"}, callback)
 ```
