@@ -9,7 +9,7 @@ function getStyle(obj, name) {
 
 function startMove(obj, json, fnEnd) {
     clearInterval(obj.timer);
-    if(typeof json.speed != undefined && isNaN(Number(json.speed))){
+    if(typeof json.speed != "undefined" && isNaN(Number(json.speed))){
         throw (".speed must be a number")
     }
     obj.timer = setInterval(function () {
