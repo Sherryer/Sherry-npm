@@ -1,4 +1,4 @@
-# move
+# sherry-move
 
 light dom move or transformation plug-in
 ## Install
