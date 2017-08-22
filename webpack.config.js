@@ -5,7 +5,7 @@ const webpackManifestPlugin = require("webpack-manifest-plugin");
 
 module.exports = {
     entry: {
-        boundle: './src/app.js'
+        boundle: './src/app.jsx'
     },
     output: {
         path: __dirname,
