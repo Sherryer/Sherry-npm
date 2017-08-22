@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+
         div{
             width: 100px;
             height: 100px;
@@ -17,7 +18,9 @@
 <!--<script src="./dist/boundle.js"></script>-->
 <script src="./myPackages/sherry-move/dist/sherryMove.js"></script>
 <script>
-    var div = document.getElementById('div')
-    var z = startMove(div,{"width":"300","speed":"0"})
+    var div = document.getElementById('div');
+    var z = startMove(div,{"width":"300"},function () {
+        alert(111)
+    })
 </script>
 </html>

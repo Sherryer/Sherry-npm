@@ -21,7 +21,7 @@ npm install sherry-move
 ### Use with HTML &lt;script&gt; tag:
 
 ```
-<script src="/node_modules/sherry-move/dist/sherryMove.js"></script>
+<script src="./node_modules/sherry-move/dist/sherryMove.js"></script>
 ```
 
 other js field you can write:
