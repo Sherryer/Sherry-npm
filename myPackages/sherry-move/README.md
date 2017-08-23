@@ -1,48 +1,35 @@
-# sherry-move
+# react-apple-menu
 
-light dom move or transformation plug-in
+menu like apple dock
 ## Install
 
-
-By npm:
-
-```
-npm install sherry-move
-```
+	npm react-apple-menu
 
 ## Usage
 
-| arguments | Description | defaultvalue | type |
+| props | description | defaultvalue | type |
 | :---: | --- | --- | --- |
-| dom | target dom | - | object |
-| json | information of this transform,like{ 'width' : '200', 'height' : '150' , 'speed' : '6'}| - | json |
-| callback | callback | null | function |
-
-### Use with HTML &lt;script&gt; tag:
-
-```
-<script src="./node_modules/sherry-move/dist/sherryMove.js"></script>
-```
-
-other js field you can write:
-
-```
-<script>
-  	startMove(dom, {"width": "300"}, callback)
-</script>
-```
+| zoom | pic zoom | 0.5 | number or string |
+| size | pic size | 64 |  number or string |
 
 
-### Use with npm:
+### Include the Component
 
-```
-import startMove from "sherry-move";
-...
-startMove(dom, {"width": "300"}, callback)
-```
+	import AppleMenu from "react-apple-menu";
+	import React from 'react';
 
-## Tips
+	class Component extends React.Component {
 
-- startMove's returned value is the dom moved.
-- json.speed belong to1-10 (more bigger more slower)
+    	render() {
+        	return (
+            	<AppleMenu>
+                	<img onClick={function(){alert("hello")}}  src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/1.png"/>
+                	<img src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/2.png"/>
+                	<img src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/3.png"/>
+                	<img src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/4.png"/>
+                	<img src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/5.png"/>
+            </AppleMenu>
+        		)
+    		}
+	}
 
