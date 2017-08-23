@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --progress --watch --color",
-    "move":"gulp move"
+    "move": "gulp move"
   },
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
   "author": "Sherry",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
     "babel-polyfill": "^6.16.0",
@@ -43,6 +44,7 @@
   },
   "dependencies": {
     "react": "^15.6.1",
+    "react-apple-menu": "^1.0.9",
     "react-color": "^2.10.0",
     "react-dom": "^15.6.1"
   },

@@ -1,8 +1,8 @@
 {
   "name": "react-apple-menu",
-  "version": "1.0.3",
+  "version": "1.0.9",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

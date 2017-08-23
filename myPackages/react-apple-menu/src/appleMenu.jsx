@@ -1,6 +1,3 @@
-/**
- * Created by Sherry on 2017/8/22.
- */
 import React, {Component} from 'react';
 
 class AppleMenu extends Component {
@@ -51,7 +48,6 @@ class AppleMenu extends Component {
     filterImg (body,img) {
         let src = [];
         let imgs = React.Children.map(this.props.children, (child, index) => {
-            console.log(child);
             if( child.type == "img" ){
                 return (
                     <img style={img} {...child.props}/>
