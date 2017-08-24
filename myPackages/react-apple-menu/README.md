@@ -2,9 +2,9 @@
 
 menu like apple dock
 ## Install
-
-	npm i react-apple-menu -S
-
+```sh
+npm i react-apple-menu -S
+```
 ## Usage
 
 | props | description | defaultvalue | type |
@@ -15,20 +15,21 @@ menu like apple dock
 
 ### Include the Component
 
-	import AppleMenu from "react-apple-menu";
-	import React from 'react';
+```js
+import AppleMenu from "react-apple-menu";
+import React from 'react';
 
-	class Component extends React.Component {
-		render() {
-			return (
-				<AppleMenu>
-					<img  onClick={function(){alert("hello")}}  src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/1.png"/>
-					<img src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/2.png"/>
-					<img src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/3.png"/>
-					<img src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/4.png"/>
-					<img src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/5.png"/>
-                </AppleMenu>
-			)
-		}
+class Component extends React.Component {
+	render() {
+		return (
+			<AppleMenu>
+				<img  onClick = {function () { alert ("hello") }}  src="https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/1.png"/>
+				<img src = "https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/2.png"/>
+				<img src = "https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/3.png"/>
+				<img src = "https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/4.png"/>
+				<img src = "https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/5.png"/>
+            </AppleMenu>
+		)
 	}
-
+}
+```
