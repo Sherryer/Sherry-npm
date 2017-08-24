@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "react": "^15.6.1",
-    "react-apple-menu": "^1.0.9",
+    "react-apple-menu": "^1.1.0",
     "react-color": "^2.10.0",
     "react-dom": "^15.6.1"
   },

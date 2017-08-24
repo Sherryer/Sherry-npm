@@ -3,14 +3,14 @@ const webpack = require('webpack');
 const cleanWebpackPlugin = require("clean-webpack-plugin");
 const webpackManifestPlugin = require("webpack-manifest-plugin");
 
+
 module.exports = {
     entry: {
-        boundle: './src/app.jsx'
+        boundle: './src/app.js',
     },
     output: {
         path: __dirname,
         filename: './dist/[name].js',
-
     },
     devtool: "cheap-module-eval-source-map",
     module: {

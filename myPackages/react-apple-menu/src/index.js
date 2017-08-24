@@ -1,2 +1,2 @@
-import AppleMenu from './appleMenu.jsx';
+import AppleMenu from './appleMenu.js';
 export default AppleMenu;

@@ -1,10 +1,11 @@
 {
   "name": "react-apple-menu",
-  "version": "1.0.9",
-  "description": "",
+  "version": "1.1.1",
+  "description": "react apple menu || react apple dock",
+  "keywords": ["react", "apple", "dock", "menu"],
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir lib"
   },
   "author": "Sherry",
   "license": "ISC"
