@@ -1,6 +1,9 @@
 # react-apple-menu
 
 menu like apple dock
+
+![image](https://raw.githubusercontent.com/Sherryer/Sherry-npm/master/static/images/show-react-apple-menu.gif)
+
 ## Install
 ```sh
 npm i react-apple-menu -S
