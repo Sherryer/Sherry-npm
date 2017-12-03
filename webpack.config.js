@@ -2,17 +2,24 @@ const path = require('path');
 const webpack = require('webpack');
 const cleanWebpackPlugin = require("clean-webpack-plugin");
 const webpackManifestPlugin = require("webpack-manifest-plugin");
+// const babel = require('babel-polyfill')
 
+
+// copy-webpack-plugin
 
 module.exports = {
     entry: {
-        boundle: './src/app.js',
+        boundle: ['./src/app.js'],
+        ceshi: './ceshi/test.js'
     },
     output: {
         path: __dirname,
         filename: './dist/[name].js',
     },
     devtool: "cheap-module-eval-source-map",
+    devServer: {
+        hot: true
+    },
     module: {
         rules: [
             {
@@ -22,7 +29,7 @@ module.exports = {
                     {
                         loader: "babel-loader",
                         options: {
-                            presets: ['react', 'stage-0', 'es2015'],
+                            presets: ['react', 'env', "stage-0"]
                         }
 
                     }

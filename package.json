@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --progress --watch --color",
+    "start": "webpack --progress --watch --color -p",
+    "dev": "webpack-dev-server --open",
     "move": "gulp move"
   },
   "repository": {
@@ -15,11 +16,12 @@
   "author": "Sherry",
   "license": "ISC",
   "devDependencies": {
+    "awesome-typescript-loader": "^3.2.3",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
     "babel-polyfill": "^6.16.0",
-    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "body-parser": "~1.13.2",
@@ -38,15 +40,19 @@
     "html-webpack-plugin": "^2.29.0",
     "postcss-loader": "^2.0.6",
     "sherryer": "^1.0.3",
+    "source-map-loader": "^0.2.3",
     "style-loader": "^0.13.1",
     "webpack": "^3.2.0",
+    "webpack-dev-server": "^2.9.4",
     "webpack-manifest-plugin": "^1.1.2"
   },
   "dependencies": {
-    "react": "^15.6.1",
-    "react-apple-menu": "^1.2.6",
+    "react": "^16.1.0-beta",
+    "react-apple-menu": "^1.4.0",
     "react-color": "^2.10.0",
-    "react-dom": "^15.6.1"
+    "react-dom": "^16.1.0-beta",
+    "typescript": "^2.5.3",
+    "webpack": "^3.8.1"
   },
   "bugs": {
     "url": "https://github.com/Sherryer/Sherry-npm/issues"
