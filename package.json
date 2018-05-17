@@ -47,10 +47,11 @@
     "webpack-manifest-plugin": "^1.1.2"
   },
   "dependencies": {
-    "react": "^16.1.0-beta",
+    "react": "^16.2.0",
     "react-apple-menu": "^1.4.0",
     "react-color": "^2.10.0",
-    "react-dom": "^16.1.0-beta",
+    "react-dom": "^16.2.0",
+    "react-loading-skeleton": "^0.4.0",
     "typescript": "^2.5.3",
     "webpack": "^3.8.1"
   },
