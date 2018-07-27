@@ -1,8 +1,6 @@
 .DS_Store
 pm2.json
 
-myPackages
-
 ###IntelliJ###
 *.ipr
 *.iws
